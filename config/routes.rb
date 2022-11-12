@@ -6,5 +6,5 @@ Rails.application.routes.draw do
   root 'pages#home'
   get 'about', to: 'pages#about'
   get 'talk', to: 'pages#talk'
-  resources :articles, only: [:show]
+  resources :articles, only: [:show, :index, :new, :create]
 end
