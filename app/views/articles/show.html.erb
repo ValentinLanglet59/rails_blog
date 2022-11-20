@@ -1,6 +1,23 @@
-<h1>showing articles details</h1>
-<p>Title : <%= @article.title %> </p>
-<p>Description : <%= @article.description %> </p>
-<td> <%= link_to 'Edit', edit_article_path(@article) %> </td>
-<td> <%= link_to 'Delete', article_path(@article), data: { turbo_method: :delete, "turbo-confirm": "Are you sure?" } %> </td>
-<td> <%= link_to 'Return to articles', articles_path %> </td>
+<h1 class="text-center mt-4 mb-4"> <%= @article.title%> </h1>
+<div class="container ">
+  <div class="row justify-content-md-center">
+    <div class="col-8">
+      <div class="card text-center mb-5">
+        <div class="card-header">
+          Featured
+        </div>
+        <div class="card-body">
+          <p class="card-text"><%= @article.description %></p>
+          <%= link_to "Edit this article", edit_article_path(@article), class: "btn btn btn-outline-info" %>
+          <%= button_to "Delete this article", article_path(@article), method: :delete,
+                                                                      data: { conferm: "Are you sure you  wont to delete this article?"},
+                                                                      class:"btn btn-xs- btn-danger" %>
+        </div>
+        <div class="card-footer text-muted">
+          <small> Created <%= time_ago_in_words(@article.created_at)%> ago,
+            edited <%= time_ago_in_words(@article.updated_at)%> ago</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

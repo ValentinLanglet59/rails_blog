@@ -1,0 +1,54 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.testdiv {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: lightgrey;
+  height: 100px;
+}
+
+.left--wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  padding-left: 10px;
+}
+
+.dropdown {
+  padding-right: 10px;
+}
+
+.navbar-brand {
+  padding-right: 10px;
+}
+
+.form-inline {
+  margin: 15px;
+  padding-top: 5px;
+}
+
+.btn-btn-outline-success {
+  margin-top: 5px;
+}
+
+
+.nav-link {
+  color: white !important;
+}
+
+a {
+  text-decoration: none;
+}
+
+.nav-color {
+  color: black !important;
+}
+
+#home-container {
+  margin-top: 45px
+}

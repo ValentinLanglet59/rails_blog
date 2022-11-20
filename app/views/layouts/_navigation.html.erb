@@ -1,0 +1,44 @@
+<div class="testdiv">
+  <div class="left--wrapper">
+    <%= link_to "ALPHA BLOG", root_path, class: "navbar-brand", id: "logo" %>
+    <div>
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Articles & Categories
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <%= link_to "Create new article", new_article_path, class: "nav-color"%> <br>
+          <%= link_to "View articles", articles_path, class: "nav-color"%> <br>
+          <%= link_to "Create new category", articles_path,class: "nav-color"%> <br>
+          <%= link_to "View categories", articles_path,class: "nav-color" %> <br>
+          <%= link_to "View your profile", articles_path,class: "nav-color" %> <br>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Profile
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <%= link_to "Edit your profile", class: "dropdown-item" %>
+          <%= link_to "Delete profile", class: "dropdown-item text-danger", method: :delete, data: { confirm: "Are you sure?" } %>
+        </div>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Login/out
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <%= link_to 'Log in', class: "nav-link" %> <br>
+        <%= link_to 'Sign up', class: "nav-link" %> <br>
+        <%= link_to 'Logout', class: "nav-link", method: :delete %> <br>
+      </div>
+    </div>
+  </div>
+  <form class="form-inline my-2 my-lg-0">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+  </form>
+</div>
