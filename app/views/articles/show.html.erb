@@ -7,7 +7,7 @@
           Featured
         </div>
         <div class="card-body">
-          <p class="card-text"><%= @article.description %></p>
+          <div class="card-text text-left"><%= simple_format(@article.description) %></div>
           <%= link_to "Edit this article", edit_article_path(@article), class: "btn btn btn-outline-info" %>
           <%= button_to "Delete this article", article_path(@article), method: :delete,
                                                                       data: { conferm: "Are you sure you  wont to delete this article?"},
